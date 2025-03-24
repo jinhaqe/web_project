@@ -2,20 +2,605 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   user-select: none;
+}
+
+li {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   font-size: 14px;
+}
+
+/* 기본적인 스타일을 설정 */
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
 }
 
 body,
 html {
    height: 100%;
    overflow: hidden;
+   scroll-behavior: smooth;
 }
 
 section {
-   height: 100vh; /* 뷰포트 전체 높이 */
+   height: 100vh;
    display: flex;
    justify-content: center;
    align-items: center;
-   font-size: 2rem;
    color: white;
    text-align: center;
+}
+
+/* 헤더 스타일 */
+.header {
+   display: flex;
+   justify-content: center;
+   gap: 50px;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   color: black;
+   padding: 0 40px;
+   z-index: 1000;
+   background-color: white;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.header:hover {
+   background-color: #ffffff;
+}
+
+/* 헤더의 로고 스타일 */
+.logo {
+   width: 150px;
+   text-align: center;
+   margin-left: 30px;
+}
+
+.header nav {
+   width: 980px;
+}
+
+/* 네비게이션 스타일 */
+nav .menu {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+nav .menu > li {
+   position: relative;
+   text-align: center;
+   line-height: 65px;
+   height: 80px;
+}
+
+nav ul li a {
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+   font-size: 1.2em;
+}
+
+.menu > li {
+   width: 100%;
+   padding: 10px 0;
+}
+
+/* 드롭다운 메뉴 스타일 */
+.submenu {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 100%;
+   background-color: #ffe6e6;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submenu li {
+   line-height: 50px;
+   padding: 3px 5px;
+   font-size: 14px;
+}
+
+.menu li:hover .title {
+   color: #d93644;
+}
+
+.submenu li:hover {
+   color: #d93644;
+   background-color: #ffb9bf86;
+   transition: background-color 0.3s ease;
+}
+
+/* 드롭다운 메뉴가 열려 있을 때 */
+.menu > li:hover .submenu {
+   display: block;
+   animation: dropdownAnimation 0.3s ease;
+}
+
+/* 드롭다운 메뉴가 부모 li 영역을 벗어날 때에도 계속 보이도록 */
+.submenu:hover {
+   display: block;
+}
+
+@keyframes dropdownAnimation {
+   0% {
+      opacity: 0;
+      transform: translateY(-10px);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+/* 사용자 관련 링크 */
+.user_in {
+   width: 200px;
+   text-align: center;
+}
+
+.user_in ul {
+   display: flex;
+   justify-content: center;
+}
+
+.user_in ul li {
+   display: inline;
+   margin: 0 15px;
+}
+
+.user_in ul li a {
+   color: #571318;
+}
+
+/* 사이드바 */
+.sidebar {
+   position: fixed;
+   top: 0;
+   right: -250px;
+   width: 250px;
+   height: 100vh;
+   background-color: #333;
+   transition: right 0.3s ease;
+   z-index: 999;
+}
+
+/* 햄버거 메뉴 */
+.hamburger {
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+   gap: 5px;
+}
+
+.hamburger .bar {
+   width: 25px;
+   height: 3px;
+   background-color: black;
+}
+
+/** section1 **/
+
+/* 캐러셀 컨테이너 */
+.carousel {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   margin: 0 auto;
+   overflow: hidden;
+}
+
+/* 캐러셀 내부 (슬라이드 영역) */
+.carousel-inner {
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+   height: 100%;
+}
+
+/* 각 슬라이드 */
+.carousel-item {
+   min-width: 100%;
+   box-sizing: border-box;
+}
+
+/* 이미지가 높이와 너비에 맞게 채워지도록 설정 */
+.carousel-item img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* 슬라이드 이전/다음 버튼 */
+.carousel-prev,
+.carousel-next {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: transparent;
+   color: white;
+   border: none;
+   font-size: 2rem;
+   padding: 10px;
+   cursor: pointer;
+   z-index: 10;
+}
+
+/* 이전 버튼 왼쪽 */
+.carousel-prev {
+   left: 10px;
+}
+
+/* 다음 버튼 오른쪽 */
+.carousel-next {
+   right: 10px;
+}
+
+/* 버튼 호버 효과 */
+.carousel-prev:hover,
+.carousel-next:hover {
+   background-color: transparent;
+   /* 배경색을 투명하게 유지 */
+}
+
+/* 인디케이터 스타일 */
+.carousel-indicators {
+   display: flex;
+   justify-content: center;
+   position: absolute;
+   bottom: 40px;
+   /* 슬라이드 배너의 위 하단에 배치 */
+   width: 100%;
+   z-index: 10;
+}
+
+.indicator {
+   width: 10px;
+   height: 10px;
+   margin: 0 5px;
+   background-color: #fff;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+   background-color: #333;
+}
+
+/* 슬라이드 화살표 스타일 */
+.silde_arrow {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   position: absolute;
+   bottom: 80px;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   z-index: 10;
+}
+
+.silde_arrow img {
+   margin-left: 28px;
+   width: 30px;
+   height: auto;
+   animation: slideUpDown 1.5s ease-in-out infinite;
+}
+
+.silde_arrow p {
+   margin-top: 10px;
+   color: rgb(0, 0, 0);
+   font-size: 14px;
+   font-weight: bold;
+   margin: 0;
+   /* p 태그의 기본 여백 제거 */
+}
+
+/* 화살표 애니메이션 */
+@keyframes slideUpDown {
+   0% {
+      transform: translate(-50%, 0);
+      opacity: 1;
+   }
+
+   50% {
+      transform: translate(-50%, 10px);
+      /* 아래로 이동 */
+      opacity: 0;
+      /* 완전히 사라짐 */
+   }
+
+   100% {
+      transform: translate(-50%, 0);
+      /* 원래 위치로 돌아옴 */
+      opacity: 1;
+      /* 다시 완전하게 보이도록 설정 */
+   }
+}
+
+/** section2 **/
+#section2 {
+   background-image: url(../img/background.jpg);
+   background-size: cover;
+   background-position: center;
+   opacity: 0.7;
+}
+
+#section2 .content_box {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   width: 1400px;
+   height: 1000px;
+   border-radius: 20px;
+   gap: 10px;
+}
+
+.today_Pick {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+}
+
+.pick_title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 30px;
+   padding: 20px 0;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.pick_title img {
+   width: 60px;
+   height: 60px;
+}
+
+.pick_title p {
+   color: rgb(255, 255, 255);
+   font-weight: bold;
+   font-size: 40px;
+   text-align: center;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.pick_menu {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 50px;
+   width: 330px;
+   height: 450px;
+   background-color: white;
+   border-radius: 20px;
+   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pick_menu img {
+   width: 300px;
+   height: 260px;
+}
+
+.pick_menu p {
+   color: black;
+   font-size: 20px;
+   font-weight: 700;
+}
+
+.other_menu {
+   width: 350px;
+   height: 75px;
+   margin-top: 60px;
+   cursor: pointer;
+   padding: 10px 20px;
+   font-size: 20px;
+   background-color: #ff6363;
+   border: none;
+   color: white;
+   transition: background-color 0.3s ease;
+   border-radius: 10px;
+}
+
+.btn_container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* pick_menu 애니메이션 */
+/* 기본 상태에서 pick_menu는 보이지 않도록 설정 */
+.pick_menu,
+.other_menu {
+   opacity: 0;
+   transform: translateY(30px);
+   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+/* 화면에 보일 때 애니메이션이 적용되도록 */
+.show {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.other_menu:hover {
+   background-color: #ff4d4d;
+}
+
+@media screen and (max-width: 1400px) {
+   .header {
+      justify-content: space-between;
+      padding: 15px 40px;
+   }
+
+   .logo {
+      width: auto;
+      padding: 0;
+      margin: 0;
+   }
+
+   .logo a img {
+      width: 50px;
+      height: 45px;
+   }
+
+   /* 네비게이션 숨기고 햄버거 메뉴만 보이게 */
+   /* section1 */
+   .header nav {
+      display: none;
+   }
+
+   .header .user_in {
+      display: none;
+   }
+
+   .hamburger {
+      display: flex;
+   }
+
+   .sidebar.open {
+      right: 0;
+   }
+
+   /* section2 */
+   .today_Pick {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+@media screen and (max-width: 1070px) {
+   /* section2 */
+   .today_Pick {
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   #section2 .content_box {
+      gap: 20px;
+   }
+
+   .pick_title {
+      padding-top: 30px;
+      margin-top: 30px;
+      margin-bottom: 0;
+   }
+
+   .pick_title img {
+      width: 55px;
+      height: 55px;
+   }
+
+   .pick_title p {
+      font-size: 33px;
+   }
+
+   .pick_menu {
+      width: 550px;
+      height: 180px;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 85px 10px 50px;
+   }
+
+   .pick_menu img {
+      width: 180px;
+      height: 150px;
+   }
+
+   .other_menu {
+      width: 300px;
+      height: 75px;
+      margin-top: 20px;
+   }
+}
+
+@media screen and (max-width: 620px) {
+   /* section2 */
+   .pick_title img {
+      width: 50px;
+      height: 50px;
+   }
+
+   .pick_menu p {
+      font-size: 15px;
+   }
+
+   .pick_menu {
+      width: 300px;
+      height: 250px;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      gap: 10px;
+   }
+
+   .pick_menu img {
+      width: 180px;
+      height: 150px;
+   }
+
+   .pick_menu p {
+      font-size: 20px;
+   }
+}
+
+@media screen and (max-width: 393px) {
+   /* section2 */
+   .pick_title {
+      margin-top: 50px;
+      margin-bottom: 30px;
+   }
+
+   .pick_title img {
+      width: 30px;
+      height: 30px;
+   }
+
+   .pick_title p {
+      font-size: 30px;
+   }
+
+   .pick_menu p {
+      font-size: 13px;
+   }
+
+   .pick_menu {
+      height: 120px;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 20px 22px 20px 0;
+      gap: 0;
+   }
+
+   .pick_menu img {
+      width: 140px;
+      height: 110px;
+   }
+
+   .pick_menu p {
+      font-size: 14px;
+   }
+
+   #section2 .content_box {
+      justify-content: center;
+   }
 }
