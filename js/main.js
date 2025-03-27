@@ -452,3 +452,12 @@ next.addEventListener("click", () => {
       moveSlide(currentIndex + 1);
    }
 });
+
+// 드롭다운 토글 기능
+document.querySelectorAll(".sidebar_title > p").forEach((item) => {
+   item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const parent = this.closest(".dropdown"); // 부모 dropdown 요소 찾기
+      parent.classList.toggle("active"); // active 클래스를 토글
+   });
+});

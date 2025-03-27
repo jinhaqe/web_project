@@ -71,7 +71,7 @@
                      <li><a href="#">HOLLYS</a></li>
                      <li><a href="#">위치 & 연락처</a></li>
                      <li><a href="#">채용 안내</a></li>
-                     <li><a href="#">가맹문의</a></li>
+                     <li><a href="#">가맹 문의</a></li>
                      <li><a href="#">B2B & 케이터링</a></li>
                   </ul>
                </li>
@@ -94,12 +94,83 @@
 
       <div class="sidebar">
          <ul class="sidebar_list">
-            <li><a href="#section1">Menu</a></li>
-            <li><a href="#section2">HOLLYS Mall</a></li>
-            <li><a href="#section3">Membership</a></li>
-            <li><a href="#section4">HOLLYS News</a></li>
-            <li><a href="#section5">Store</a></li>
-            <li><a href="#section6">HOLLYS is</a></li>
+            <li class="dropdown">
+               <div class="sidebar_title">
+                  <p>Menu</p>
+               </div>
+               <ul class="dropdown_list">
+                  <li><a href="#subsection1">커피</a></li>
+                  <li><a href="#subsection2">음료</a></li>
+                  <li><a href="#subsection2">푸드</a></li>
+                  <li><a href="#subsection2">MD상품 · 식품</a></li>
+               </ul>
+            </li>
+
+            <hr class="list_hr" />
+
+            <li class="dropdown">
+               <div class="sidebar_title">
+                  <p>HOLLYS Mall</p>
+               </div>
+               <ul class="dropdown_list">
+                  <li><a href="#subsection1">기프티콘</a></li>
+                  <li><a href="#subsection2">카드</a></li>
+                  <li><a href="#subsection2">E-Store</a></li>
+                  <li><a href="#subsection2">구매내역</a></li>
+               </ul>
+            </li>
+
+            <hr class="list_hr" />
+
+            <li class="dropdown">
+               <div class="sidebar_title">
+                  <p>Membership</p>
+               </div>
+               <ul class="dropdown_list">
+                  <li><a href="#subsection1">스마트오더</a></li>
+                  <li><a href="#subsection2">멤버십 혜택</a></li>
+               </ul>
+            </li>
+
+            <hr class="list_hr" />
+
+            <li class="dropdown">
+               <div class="sidebar_title">
+                  <p>HOLLYS News</p>
+               </div>
+               <ul class="dropdown_list">
+                  <li><a href="#subsection1">Notice</a></li>
+                  <li><a href="#subsection2">Event</a></li>
+               </ul>
+            </li>
+
+            <hr class="list_hr" />
+
+            <li class="dropdown">
+               <div class="sidebar_title">
+                  <p>Store</p>
+               </div>
+               <ul class="dropdown_list">
+                  <li><a href="#subsection1">매장검색</a></li>
+               </ul>
+            </li>
+
+            <hr class="list_hr" />
+
+            <li class="dropdown">
+               <div class="sidebar_title">
+                  <p>HOLLYS is</p>
+               </div>
+               <ul class="dropdown_list">
+                  <li><a href="#subsection1">HOLLYS</a></li>
+                  <li><a href="#subsection2">위치 & 연락처</a></li>
+                  <li><a href="#subsection2">채용 안내</a></li>
+                  <li><a href="#subsection2">가맹 문의</a></li>
+                  <li><a href="#subsection2">B2B & 케이터링</a></li>
+               </ul>
+            </li>
+
+            <hr class="list_hr" />
          </ul>
       </div>
 
@@ -337,7 +408,7 @@
          <div class="franchise_size_box">
             <div class="franchise_contents">
                <h1>HOLLYS 가맹점</h1>
-               <div class="bar"></div>
+               <div class="bar1"></div>
                <p>" 커피 한 잔, 마음 한 스푼! 언제나 할리스가 함께합니다. "</p>
                <div class="wrap">
                   <div class="prev"></div>
@@ -345,32 +416,50 @@
                      <div class="franchise_slide_box">
                         <div class="slide_item">
                            <a href="#">
-                              <img src="./img/store1.png" alt="1" />
+                              <div class="img-wrapper">
+                                 <img src="./img/store1.png" alt="1" />
+                                 <div class="location-overlay">강남점</div>
+                              </div>
                            </a>
                         </div>
                         <div class="slide_item">
                            <a href="#">
-                              <img src="./img/store2.jpg" alt="1" />
+                              <div class="img-wrapper">
+                                 <img src="./img/store2.jpg" alt="2" />
+                                 <div class="location-overlay">홍대점</div>
+                              </div>
                            </a>
                         </div>
                         <div class="slide_item">
                            <a href="#">
-                              <img src="./img/store3.jpg" alt="1" />
+                              <div class="img-wrapper">
+                                 <img src="./img/store3.jpg" alt="3" />
+                                 <div class="location-overlay">신촌점</div>
+                              </div>
                            </a>
                         </div>
                         <div class="slide_item">
                            <a href="#">
-                              <img src="./img/store4.jpg" alt="1" />
+                              <div class="img-wrapper">
+                                 <img src="./img/store4.jpg" alt="4" />
+                                 <div class="location-overlay">서초점</div>
+                              </div>
                            </a>
                         </div>
                         <div class="slide_item">
                            <a href="#">
-                              <img src="./img/store5.jpg" alt="1" />
+                              <div class="img-wrapper">
+                                 <img src="./img/store5.jpg" alt="5" />
+                                 <div class="location-overlay">종로점</div>
+                              </div>
                            </a>
                         </div>
                         <div class="slide_item">
                            <a href="#">
-                              <img src="./img/store6.jpg" alt="1" />
+                              <div class="img-wrapper">
+                                 <img src="./img/store6.jpg" alt="6" />
+                                 <div class="location-overlay">이태원점</div>
+                              </div>
                            </a>
                         </div>
                      </div>
