@@ -420,3 +420,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
    observer.observe(section4);
 });
+
+// section6
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const slideBox = document.querySelector(".franchise_slide_box");
+const slide = document.querySelectorAll(".slide_item");
+const slideLength = slide.length;
+let currentIndex = 0;
+
+// 슬라이드 이동 함수
+const moveSlide = function (num) {
+   slideBox.style.transform = `translateX(${-num * 930}px)`;
+   currentIndex = num;
+};
+
+// 이전 버튼 클릭 시
+prev.addEventListener("click", () => {
+   if (currentIndex === 0) {
+      moveSlide(1); // 마지막 세트로 이동
+   } else {
+      moveSlide(currentIndex - 1);
+   }
+});
+
+// 다음 버튼 클릭 시
+next.addEventListener("click", () => {
+   if (currentIndex === 1) {
+      moveSlide(0); // 첫 번째 세트로 돌아가기
+   } else {
+      moveSlide(currentIndex + 1);
+   }
+});

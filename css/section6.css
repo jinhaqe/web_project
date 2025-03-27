@@ -1,8 +1,11 @@
 .franchise_size_box {
    width: 1400px;
    height: 80vh;
-   background-color: rgb(223, 255, 244);
    padding: 50px 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: 70px;
 }
 
 .franchise_contents {
@@ -29,4 +32,68 @@
    color: black;
    font-size: 20px;
    margin-bottom: 20px;
+}
+
+.slide_item img {
+   width: 300px; /* 이미지 너비 조정 */
+   height: 220px;
+   object-fit: cover;
+}
+
+.wrap {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   width: 1400px;
+   gap: 10px; /* 화살표와 이미지 사이 간격 */
+}
+
+.box {
+   overflow: hidden;
+   width: 930px;
+}
+
+.franchise_slide_box {
+   display: flex;
+   transition: 0.5s;
+   width: 1860px;
+   gap: 10px;
+}
+
+.slide_item {
+   width: 350px;
+}
+
+.prev,
+.next {
+   width: 30px;
+   height: 30px;
+   background-position: center;
+   background-size: cover;
+}
+
+.prev {
+   left: 50px;
+   margin-right: 10px;
+   background-image: url(../img/franchise_left.png);
+}
+
+.next {
+   right: 50px;
+   background-image: url(../img/franchise_right.png);
+}
+
+.inquiry {
+   width: 400px;
+   height: 60px;
+   margin-top: 40px;
+   font-size: 20px;
+   color: white;
+   border: 0;
+   background-color: #ff6363;
+}
+
+.inquiry:hover {
+   background-color: #ff4d4d;
 }
