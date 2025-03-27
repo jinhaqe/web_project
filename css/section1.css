@@ -1,0 +1,141 @@
+/** section1 **/
+
+/* 캐러셀 컨테이너 */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  /* 캐러셀 내부 (슬라이드 영역) */
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  /* 각 슬라이드 */
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* 이미지가 높이와 너비에 맞게 채워지도록 설정 */
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* 슬라이드 이전/다음 버튼 */
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  /* 이전 버튼 왼쪽 */
+  .carousel-prev {
+    left: 10px;
+  }
+  
+  /* 다음 버튼 오른쪽 */
+  .carousel-next {
+    right: 10px;
+  }
+  
+  /* 버튼 호버 효과 */
+  .carousel-prev:hover,
+  .carousel-next:hover {
+    background-color: transparent;
+    /* 배경색을 투명하게 유지 */
+  }
+  
+  /* 인디케이터 스타일 */
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 40px;
+    /* 슬라이드 배너의 위 하단에 배치 */
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .indicator.active {
+    background-color: #333;
+  }
+  
+  /* 슬라이드 화살표 스타일 */
+  .silde_arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .silde_arrow img {
+    margin-left: 28px;
+    width: 30px;
+    height: auto;
+    animation: slideUpDown 1.5s ease-in-out infinite;
+  }
+  
+  .silde_arrow p {
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    /* p 태그의 기본 여백 제거 */
+  }
+  
+  /* 화살표 애니메이션 */
+  @keyframes slideUpDown {
+    0% {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+  
+    50% {
+      transform: translate(-50%, 10px);
+      /* 아래로 이동 */
+      opacity: 0;
+      /* 완전히 사라짐 */
+    }
+  
+    100% {
+      transform: translate(-50%, 0);
+      /* 원래 위치로 돌아옴 */
+      opacity: 1;
+      /* 다시 완전하게 보이도록 설정 */
+    }
+  }
+  

@@ -1,0 +1,129 @@
+/* 헤더 스타일 */
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: black;
+    padding: 0 40px;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+  .header:hover {
+    background-color: #ffffff;
+  }
+
+  /* 헤더의 로고 스타일 */
+.logo {
+    width: 150px;
+    text-align: center;
+    margin-left: 30px;
+  }
+  
+  .header nav {
+    width: 980px;
+  }
+
+  /* 네비게이션 스타일 */
+nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav .menu > li {
+    position: relative;
+    text-align: center;
+    line-height: 65px;
+    height: 80px;
+  }
+  
+  nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .menu > li {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* 드롭다운 메뉴 스타일 */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffe6e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submenu li {
+    line-height: 50px;
+    padding: 3px 5px;
+    font-size: 14px;
+  }
+  
+  .menu li:hover .title {
+    color: #d93644;
+  }
+  
+  .submenu li:hover {
+    color: #d93644;
+    background-color: #ffd0d486;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* 드롭다운 메뉴가 열려 있을 때 */
+  .menu > li:hover .submenu {
+    display: block;
+    animation: dropdownAnimation 0.3s ease;
+  }
+  
+  /* 드롭다운 메뉴가 부모 li 영역을 벗어날 때에도 계속 보이도록 */
+  .submenu:hover {
+    display: block;
+  }
+  
+
+  
+  /* 사용자 관련 링크 */
+  .user_in {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .user_in ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .user_in ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .user_in ul li a {
+    color: #571318;
+  }
+
+  @keyframes dropdownAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

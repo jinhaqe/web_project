@@ -1,0 +1,111 @@
+/** section2 **/
+
+#section2 {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+  }
+  
+  #section2 .content_box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1400px;
+    height: 100vh;
+    border-radius: 20px;
+    gap: 10px;
+  }
+  
+  .today_Pick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .pick_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .pick_title img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .pick_title p {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .pick_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    width: 330px;
+    height: 450px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .pick_menu img {
+    width: 300px;
+    height: 260px;
+  }
+  
+  .pick_menu p {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .other_menu {
+    width: 350px;
+    height: 75px;
+    margin-top: 60px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #ff6363;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* pick_menu 애니메이션 */
+  /* 기본 상태에서 pick_menu는 보이지 않도록 설정 */
+  .pick_menu,
+  .other_menu {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  
+  /* 화면에 보일 때 애니메이션이 적용되도록 */
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .other_menu:hover {
+    background-color: #ff4d4d;
+  }

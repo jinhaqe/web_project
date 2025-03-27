@@ -1,0 +1,150 @@
+/* footer.css */
+
+footer {
+  width: 100%;
+  height: 250px;
+  background-color: #4b4b4b;
+}
+
+#section7 {
+  height: 250px;
+}
+
+.privacy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  height: 15%;
+  margin-top: 10px;
+}
+
+.privacy span a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.privacy span:last-child {
+  margin-right: 0;
+}
+
+.footer_all {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer_infor {
+  width: 500px;
+  height: 80%;
+}
+
+footer hr {
+  margin: 7px 0;
+  color: black;
+}
+
+.company_infor {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.company_infor .sns:first-child {
+  margin-left: 20px;
+}
+
+.footer_logo {
+  width: 150px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.sns {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sns div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #dddddd;
+  border-radius: 50px;
+}
+
+.insta,
+.facebook {
+  width: 35px;
+  height: 35px;
+}
+
+.footer_infor p {
+  text-align: left;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.footer_infor span {
+  margin-right: 10px;
+  letter-spacing: 1px;
+}
+
+.footer_infor b {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.sns div:hover {
+  background-color: #ffffff;
+}
+
+.tab_company_text {
+  display: none;
+}
+
+.tab_company_text2 {
+  display: none;
+}
+
+.footer_menu {
+  width: 700px;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  padding-top: 5px;
+  gap: 30px;
+}
+
+.footer_menu .menu1 {
+  padding-left: 3px;
+  text-align: left;
+}
+
+.footer_menu .menu1 h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer_menu .menu1 li {
+  padding: 3px;
+}
+
+.footer_menu .menu1 li a {
+  color: #e0e0e0;
+}
+
+.footer_menu .menu1 li a:hover {
+  color: #ff6363;
+}
