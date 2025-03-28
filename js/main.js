@@ -477,3 +477,21 @@ document.querySelectorAll(".sidebar_title > p").forEach((item) => {
       parent.classList.toggle("active"); // active 클래스를 토글
    });
 });
+
+// 모바일 스크롤
+let touchStart = 0;
+
+document.addEventListener("touchstart", function (event) {
+   touchStart = event.touches[0].clientY;
+});
+
+document.addEventListener("touchend", function (event) {
+   let touchEnd = event.changedTouches[0].clientY;
+   if (touchStart > touchEnd) {
+      // 아래로 스크롤
+      window.scrollBy(0, window.innerHeight);
+   } else {
+      // 위로 스크롤
+      window.scrollBy(0, -window.innerHeight);
+   }
+});
