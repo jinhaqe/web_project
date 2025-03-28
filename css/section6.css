@@ -95,6 +95,7 @@
    border: 0;
    background-color: #ff6363;
    cursor: pointer;
+   border-radius: 10px;
 }
 
 .inquiry:hover {

@@ -38,7 +38,7 @@
 
 /* 기존 highlight 스타일 */
 .highlight {
-   background-color: #ff4d4d;
+   background-color: #ff6363;
    color: rgb(255, 255, 255);
    padding: 0 20px;
    border-radius: 2px;
@@ -87,10 +87,14 @@
    margin-top: 40px;
    cursor: pointer;
    font-size: 17px;
-   background-color: #ff4d4d;
+   background-color: #ff6363;
    border: none;
    color: white;
    border-radius: 10px;
+}
+
+.diff_menu:hover {
+   background-color: #ff4d4d;
 }
 
 /* 메뉴 슬라이드 배너 */

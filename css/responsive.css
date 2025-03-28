@@ -1,394 +1,470 @@
 @media screen and (max-width: 1400px) {
-  .header {
-    justify-content: space-between;
-    padding: 15px 40px;
-  }
+   .header {
+      justify-content: space-between;
+      padding: 15px 40px;
+   }
 
-  .logo {
-    width: auto;
-    padding: 0;
-    margin: 0;
-  }
+   .logo {
+      width: auto;
+      padding: 0;
+      margin: 0;
+   }
 
-  .logo a img {
-    width: 50px;
-    height: 45px;
-  }
+   .logo a img {
+      width: 50px;
+      height: 45px;
+   }
 
-  /* section1 */
-  .header nav {
-    display: none;
-  }
+   /* section1 */
+   .header nav {
+      display: none;
+   }
 
-  .header .user_in {
-    display: none;
-  }
+   .header .user_in {
+      display: none;
+   }
 
-  .hamburger {
-    display: flex;
-  }
+   .hamburger {
+      display: flex;
+   }
 
-  .sidebar.open {
-    right: 0;
-  }
+   .sidebar.open {
+      right: 0;
+   }
 
-  /* section2 */
-  .today_Pick {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+   /* section2 */
+   .today_Pick {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
 
-  /* footer */
-  .company_text {
-    display: none;
-  }
+   /* footer */
+   .company_text {
+      display: none;
+   }
 
-  .footer_menu {
-    display: none;
-  }
+   .footer_menu {
+      display: none;
+   }
 
-  .tab_company_text {
-    display: block;
-  }
+   .tab_company_text {
+      display: block;
+   }
 
-  .tab_company_text p {
-    display: flex;
-    justify-content: center;
-  }
+   .tab_company_text p {
+      display: flex;
+      justify-content: center;
+   }
 
-  .footer_infor {
-    width: 1000px;
-  }
+   .footer_infor {
+      width: 1000px;
+   }
 
-  .company_infor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+   .company_infor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
 
-  /* section3 */
-  #section3 .slide-text h3 {
-    text-align: center;
-  }
-  .slide-text p {
-    display: none;
-  }
+   /* section3 */
+   #section3 .slide-text h3 {
+      text-align: center;
+   }
+   .slide-text p {
+      display: none;
+   }
 }
 
 @media screen and (max-width: 1180px) {
-  /* section3 */
-  .menu_info .sub_title {
-    font-size: 20px;
-  }
+   /* section3 */
+   .menu_info .sub_title {
+      font-size: 20px;
+   }
 
-  .menu_info h1 {
-    font-size: 30px;
-  }
+   .menu_info h1 {
+      font-size: 30px;
+   }
 
-  .section3_content {
-    flex-direction: column;
-    margin-top: 50px;
-  }
+   .section3_content {
+      flex-direction: column;
+      margin-top: 50px;
+   }
 
-  .menu_box {
-    width: 40%;
-    height: 400px;
-    overflow: visible;
-  }
+   .menu_box {
+      width: 40%;
+      height: 400px;
+      overflow: visible;
+   }
 
-  .slide img {
-    width: 80%;
-    height: 70%;
-    object-fit: cover;
-    margin-top: 20px;
-  }
+   .slide img {
+      width: 80%;
+      height: 70%;
+      object-fit: cover;
+      margin-top: 20px;
+   }
 
-  .section3_content {
-    gap: 40px;
-  }
+   .section3_content {
+      gap: 40px;
+   }
 
-  .diff_menu {
-    margin-top: 20px;
-  }
+   .diff_menu {
+      margin-top: 20px;
+   }
 
-  .menu_text1 {
-    margin-top: 20px;
-    margin-bottom: 15px;
-    font-size: 20px;
-  }
+   .menu_text1 {
+      margin-top: 20px;
+      margin-bottom: 15px;
+      font-size: 20px;
+   }
 
-  .sub_title {
-    margin-bottom: 10px;
-  }
+   .sub_title {
+      margin-bottom: 10px;
+   }
+
+   /* section4 */
+   .drink_banner {
+      display: none;
+   }
+
+   .event_banner {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   }
+
+   .dis {
+      display: block;
+   }
+
+   .event_size {
+      height: auto;
+   }
+
+   .event_img {
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+   }
+
+   .event {
+      gap: 15px;
+   }
+
+   .event h2 {
+      height: 20px;
+      font-size: 40px;
+   }
 }
 
 @media screen and (max-width: 1070px) {
-  /* section2 */
-  .today_Pick {
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-  }
+   /* section2 */
+   .today_Pick {
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+   }
 
-  #section2 .content_box {
-    gap: 20px;
-  }
+   #section2 .content_box {
+      gap: 20px;
+   }
 
-  .pick_title {
-    padding-top: 30px;
-    margin-top: 30px;
-    margin-bottom: 0;
-  }
+   .pick_title {
+      padding-top: 30px;
+      margin-top: 30px;
+      margin-bottom: 0;
+   }
 
-  .pick_title img {
-    width: 55px;
-    height: 55px;
-  }
+   .pick_title img {
+      width: 55px;
+      height: 55px;
+   }
 
-  .pick_title p {
-    font-size: 33px;
-  }
+   .pick_title p {
+      font-size: 33px;
+   }
 
-  .pick_menu {
-    width: 550px;
-    height: 180px;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 85px 10px 50px;
-  }
+   .pick_menu {
+      width: 550px;
+      height: 180px;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 85px 10px 50px;
+   }
 
-  .pick_menu img {
-    width: 180px;
-    height: 150px;
-  }
+   .pick_menu img {
+      width: 180px;
+      height: 150px;
+   }
 
-  .other_menu {
-    width: 300px;
-    height: 75px;
-    margin-top: 20px;
-  }
+   .other_menu {
+      width: 300px;
+      height: 75px;
+      margin-top: 20px;
+   }
+
+   /* section6 */
+   .box {
+      overflow: hidden;
+      width: 350px; /* 1개씩 보이도록 너비 조정 */
+   }
+
+   .franchise_slide_box {
+      width: 360px; /* 슬라이드 1개씩 보이도록 수정 */
+   }
+
+   .img-wrapper img {
+      width: 350px; /* 이미지 너비 조정 */
+   }
+
+   .slide_item {
+      width: 350px; /* 각 슬라이드 항목의 너비를 1개로 설정 */
+   }
+
+   .franchise_slide_box {
+      gap: 0;
+   }
+
+   .prev {
+      margin: 0;
+   }
 }
 
 @media screen and (max-width: 900px) {
-  /* section5 */
-  .Hollys_sns {
-    display: none;
-  }
+   /* section5 */
+   .Hollys_sns {
+      display: none;
+   }
 
-  .introduce {
-    display: flex;
-    flex-direction: column;
-  }
+   .introduce {
+      display: flex;
+      flex-direction: column;
+   }
 
-  .Hollys_info {
-    width: 360px;
-    height: 300px;
-  }
+   .Hollys_info {
+      width: 360px;
+      height: 300px;
+   }
 
-  .hollys_intro {
-    gap: 20px;
-    padding-top: 60px;
-  }
+   .hollys_intro {
+      gap: 20px;
+      padding-top: 60px;
+   }
 
-  .intro_title h1 {
-    font-size: 25px;
-  }
+   .intro_title h1 {
+      font-size: 25px;
+   }
 
-  .img_size {
-    width: 80px;
-    height: 70px;
-  }
+   .img_size {
+      width: 80px;
+      height: 70px;
+   }
 
-  .Hollys_info h3 {
-    font-size: 18px;
-  }
+   .Hollys_info h3 {
+      font-size: 18px;
+   }
 
-  .Hollys_info p {
-    font-size: 14px;
-  }
+   .Hollys_info p {
+      font-size: 14px;
+   }
 }
 
 @media screen and (max-width: 800px) {
-  /* footer */
-  .tab_company_text {
-    display: none;
-  }
+   /* footer */
+   .tab_company_text {
+      display: none;
+   }
 
-  .tab_company_text2 {
-    display: block;
-  }
+   .tab_company_text2 {
+      display: block;
+   }
 
-  .tab_company_text2 p {
-    text-align: center;
-  }
+   .tab_company_text2 p {
+      text-align: center;
+   }
 }
 
 @media screen and (max-width: 620px) {
-  /* section2 */
-  .pick_title img {
-    width: 50px;
-    height: 50px;
-  }
+   /* section2 */
+   .pick_title img {
+      width: 50px;
+      height: 50px;
+   }
 
-  .pick_menu {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 150px;
-    cursor: pointer;
-    transition: background 0.3s, opacity 0.3s;
-    padding: 10px 50px;
-  }
+   .pick_menu {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 150px;
+      cursor: pointer;
+      transition: background 0.3s, opacity 0.3s;
+      padding: 10px 50px;
+   }
 
-  .pick_menu img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    transition: opacity 0.3s;
-  }
+   .pick_menu img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: opacity 0.3s;
+   }
 
-  .pick_menu p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-  }
+   .pick_menu p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+   }
 
-  .pick_menu.active {
-    background: rgba(0, 0, 0, 0.7);
-  }
+   .pick_menu.active {
+      background: rgba(0, 0, 0, 0.7);
+   }
 
-  .pick_menu.active img {
-    opacity: 0.3;
-  }
+   .pick_menu.active img {
+      opacity: 0.3;
+   }
 
-  .pick_menu.active p {
-    opacity: 1;
-  }
+   .pick_menu.active p {
+      opacity: 1;
+   }
 
-  .pick_title {
-    padding: 10px;
-    margin-top: 60px;
-  }
+   .pick_title {
+      padding: 10px;
+      margin-top: 60px;
+   }
 
-  .other_menu {
-    width: 250px;
-    height: 65px;
-    font-size: 17px;
-  }
+   .other_menu {
+      width: 250px;
+      height: 65px;
+      font-size: 17px;
+   }
+
+   /* section4 */
+   .event_img {
+      width: 30%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+   }
+
+   .event_inquiry {
+      width: 300px;
+   }
 }
 
 @media screen and (max-width: 500px) {
-  /* section5 */
-  .Hollys_info {
-    width: 320px;
-    height: 260px;
-  }
+   /* section5 */
+   .Hollys_info {
+      width: 320px;
+      height: 260px;
+   }
 
-  .hollys_intro {
-    gap: 30px;
-    padding-top: 60px;
-  }
+   .hollys_intro {
+      gap: 30px;
+      padding-top: 60px;
+   }
 
-  .intro_title h1 {
-    font-size: 22px;
-  }
+   .intro_title h1 {
+      font-size: 22px;
+   }
 
-  .img_size {
-    width: 60px;
-    height: 50px;
-  }
+   .img_size {
+      width: 60px;
+      height: 50px;
+   }
 
-  .Hollys_info h3 {
-    font-size: 16px;
-  }
+   .Hollys_info h3 {
+      font-size: 16px;
+   }
 
-  .Hollys_info p {
-    font-size: 12px;
-  }
+   .Hollys_info p {
+      font-size: 12px;
+   }
 
-  /* footer */
-  footer {
-    height: 200px;
-  }
+   /* footer */
+   footer {
+      height: 200px;
+   }
 
-  .tab_company_text2 {
-    display: none;
-  }
+   .tab_company_text2 {
+      display: none;
+   }
 
-  #section7 {
-    height: 200px;
-  }
+   #section7 {
+      height: 200px;
+   }
 
-  .company_infor {
-    margin-top: 20px;
-  }
+   .company_infor {
+      margin-top: 20px;
+   }
 
-  .privacy span a {
-    font-size: 12px;
-  }
+   .privacy span a {
+      font-size: 12px;
+   }
+
+   .franchise_contents p {
+      font-size: 17px;
+   }
 }
 
 @media screen and (max-width: 380px) {
-  .header {
-    padding: 10px;
-  }
+   .header {
+      padding: 10px;
+   }
 
-  .hamburger {
-    display: flex;
-  }
+   .hamburger {
+      display: flex;
+   }
 
-  .logo img {
-    width: 50px;
-    height: 50px;
-  }
+   .logo img {
+      width: 50px;
+      height: 50px;
+   }
 
-  .pick_menu {
-    width: 250px;
-  }
+   .pick_menu {
+      width: 250px;
+   }
 
-  .pick_menu img {
-    width: 140px;
-    height: 120px;
-  }
+   .pick_menu img {
+      width: 140px;
+      height: 120px;
+   }
 
-  .pick_title p {
-    font-size: 23px;
-  }
+   .pick_title p {
+      font-size: 23px;
+   }
 
-  .pick_menu p {
-    font-size: 16px;
-  }
+   .pick_menu p {
+      font-size: 16px;
+   }
 
-  /* footer */
-  footer {
-    height: 250px;
-  }
+   /* footer */
+   footer {
+      height: 250px;
+   }
 
-  #section7 {
-    height: 250px;
-  }
+   #section7 {
+      height: 250px;
+   }
 
-  .company_infor {
-    flex-direction: column;
-    gap: 20px;
-    margin: 0;
-  }
+   .company_infor {
+      flex-direction: column;
+      gap: 20px;
+      margin: 0;
+   }
 
-  .privacy span a {
-    font-size: 12px;
-  }
+   .privacy span a {
+      font-size: 12px;
+   }
 
-  .footer_logo {
-    margin: 0;
-  }
+   .footer_logo {
+      margin: 0;
+   }
 }

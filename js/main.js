@@ -431,14 +431,20 @@ let currentIndex = 0;
 
 // 슬라이드 이동 함수
 const moveSlide = function (num) {
-   slideBox.style.transform = `translateX(${-num * 930}px)`;
+   // 화면 너비에 따라 다른 슬라이드 너비 적용
+   const slideWidth = window.innerWidth <= 1070 ? 350 : 930;
+   slideBox.style.transform = `translateX(${-num * slideWidth}px)`;
    currentIndex = num;
 };
 
 // 이전 버튼 클릭 시
 prev.addEventListener("click", () => {
+   // 화면 너비에 따라 다른 인덱스 이동 로직
+   const totalSlides =
+      window.innerWidth <= 1070 ? slideLength : Math.ceil(slideLength / 3);
+
    if (currentIndex === 0) {
-      moveSlide(1); // 마지막 세트로 이동
+      moveSlide(totalSlides - 1); // 마지막 슬라이드로 이동
    } else {
       moveSlide(currentIndex - 1);
    }
@@ -446,11 +452,21 @@ prev.addEventListener("click", () => {
 
 // 다음 버튼 클릭 시
 next.addEventListener("click", () => {
-   if (currentIndex === 1) {
-      moveSlide(0); // 첫 번째 세트로 돌아가기
+   // 화면 너비에 따라 다른 인덱스 이동 로직
+   const totalSlides =
+      window.innerWidth <= 1070 ? slideLength : Math.ceil(slideLength / 3);
+
+   if (currentIndex === totalSlides - 1) {
+      moveSlide(0); // 첫 번째 슬라이드로 이동
    } else {
       moveSlide(currentIndex + 1);
    }
+});
+
+// 화면 크기 변경 시 슬라이드 초기화
+window.addEventListener("resize", () => {
+   currentIndex = 0;
+   moveSlide(0);
 });
 
 // 드롭다운 토글 기능
