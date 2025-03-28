@@ -31,7 +31,7 @@ body {
 body,
 html {
    height: 100%;
-   overflow: auto;
+   overflow: hidden;
 }
 
 section {
@@ -41,4 +41,5 @@ section {
    align-items: center;
    color: white;
    text-align: center;
+   overflow: scroll;
 }
